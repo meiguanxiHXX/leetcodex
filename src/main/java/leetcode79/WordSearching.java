@@ -37,9 +37,9 @@ public class WordSearching {
         if (board[i][j] == word.charAt(index)) {
             //标志已经访问过了
             visited[i][j] = true;
-            for (int k = 0; k < direction.length; k++) {
-                int newX = i + direction[k][0];
-                int newY = j + direction[k][1];
+            for (int[] ints : direction) {
+                int newX = i + ints[0];
+                int newY = j + ints[1];
                 if (inArea(newX, newY) && !visited[newX][newY]) {
                     if (dfs(newX, newY, index + 1)) {
                         return true;
