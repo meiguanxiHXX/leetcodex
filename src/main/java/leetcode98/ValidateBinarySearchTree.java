@@ -21,7 +21,7 @@ public class ValidateBinarySearchTree {
 
     private boolean isSorted(List<Integer> sortedTreeNodeValue) {
         for (int i = 0; i < sortedTreeNodeValue.size() - 1; i++) {
-            if (sortedTreeNodeValue.get(i) > sortedTreeNodeValue.get(i + 1)) {
+            if (sortedTreeNodeValue.get(i) >= sortedTreeNodeValue.get(i + 1)) {
                 return false;
             }
         }
